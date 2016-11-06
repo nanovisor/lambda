@@ -1,0 +1,64 @@
+.ingredients {
+  background: #4f4136 url("../img/ingredients-bg.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__wrap {
+    float: right;
+    width: 570px;
+    margin: 100px 0;
+    padding: 0 80px;
+    padding-bottom: 73px;
+    text-align: center;
+    color: $white;
+    background: url("../img/ingredients-wrap-bg.png");
+  }
+
+  &__heading {
+    position: relative;
+    margin: 0;
+    margin-top: 83px;
+    margin-bottom: 70px;
+    @include f-yeseva-regular;
+    font-size: 2.25em;
+    line-height: 1;
+
+    &:after {
+      position: absolute;
+      @extend .sprite;
+      @extend .sprite-decor-silver;
+      top: 55px;
+      left: 50%;
+      margin-left: -123px;
+      content: "";
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 65px;
+    @include f-lato-regular;
+    font-size: 1em;
+    line-height: 24px;
+  }
+
+  &__list {
+    @include list-reset;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__item-img {
+    border-radius: 100px;
+    border: 5px solid rgba(255, 255,255, 0.1);
+  }
+}

@@ -1,0 +1,101 @@
+.page-footer {
+  padding: 60px 0;
+  background-color: #191919;
+  color: #fff;
+
+  &__col {
+    float: left;
+    text-align: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--about {
+      width: 370px;
+      margin-right: 100px;
+    }
+
+    &--hours {
+      width: 230px;
+      margin-right: 170px;
+    }
+
+    &--location {
+      width: 230px;
+    }
+  }
+
+  &__heading {
+    position: relative;
+    margin: 0;
+    margin-bottom: 60px;
+    @include f-yeseva-regular; //  поищи безопасные шрифты к этим шрифтам и что бы похожи были
+    font-size: 21px; //         to em
+    line-height: 1;
+    color: #fefefe;
+
+    &:after {
+      position: absolute;
+      @extend .sprite;
+      @extend .sprite-decor-silver;
+      top: 37px;
+      left: 50%;
+      margin-left: -123px;
+      content: "";
+    }
+  }
+
+  &__text {
+    margin: 0;
+    @include f-opensans;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 24px;
+    color: $white;
+  }
+}
+
+.social-list {
+  margin-top: 50px;
+  font-size: 0;
+
+  &__item {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 11px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    & > i {
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+}
+
+.paycard-list {
+  margin-top: 50px;
+  font-size: 0;
+
+  &__item {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 11px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    & > i {
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+}

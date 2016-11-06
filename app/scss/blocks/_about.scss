@@ -1,0 +1,49 @@
+.about {
+  padding-top: 55px;
+  padding-bottom: 30px;
+  background: linear-gradient(to right bottom, rgba(1, 1, 1, 0.1), rgba(0, 0, 0, 0.1)),
+              url("../img/pattern-scales.jpg") center;
+  box-shadow: inset 0 0 50px rgba(1, 1, 1, 0.2);
+
+  &__wrap {
+    float: left;
+    width: 430px;
+    margin-left: 60px;
+    margin-right: 36px;
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  &__heading {
+    position: relative;
+    margin: 0;
+    margin-bottom: 65px;
+    @include f-yeseva-regular;
+    font-size: 2.250em;
+    line-height: 1;
+    color: $buddha-gold;
+
+    &:after {
+      @extend .sprite;
+      @extend .sprite-decor-gold;
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      margin-left: -123px;
+      content: "";
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 50px;
+    @include f-lato-regular;
+    font-size: 1em;
+    line-height: 24px;
+    color: $tundora;
+  }
+
+  &__img {
+    margin-left: 72px;
+  }
+}

@@ -1,0 +1,18 @@
+@mixin f-gentium-bold {
+  font-family: 'Gentium Book Basic', serif;
+  font-weight: 700;
+}
+
+@mixin f-yeseva-regular {
+  font-family: 'Yeseva One', cursive;
+  font-weight: 400;
+}
+
+@mixin f-lato-regular {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+@mixin f-opensans {
+  font-family: 'Open Sans', sans-serif;
+}

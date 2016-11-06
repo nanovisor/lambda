@@ -1,0 +1,31 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 1190px;
+  font-size: 16px;
+  line-height: 24px;
+  // background-color: #f7f7f7;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  &--clearfix {
+    @include clearfix;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

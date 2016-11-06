@@ -1,0 +1,117 @@
+.menu {
+  padding-top: 107px;
+  padding-bottom: 96px;
+  background: linear-gradient(to right bottom, rgba(32, 90, 91, 0.1), rgba(255, 255, 255, 0.1)),
+              url("../img/pattern-hexagon.jpg") center;
+  box-shadow: inset 0 0 50px rgba(1, 1, 1, 0.2);
+
+  &__left-col {
+    float: left;
+    width: 455px;
+    margin-left: 48px;
+    margin-right: 145px;
+  }
+
+  &__right-col {
+    float: left;
+    width: 455px;
+  }
+}
+
+.dish-type {
+  margin-bottom: 62px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__heading {
+    position: relative;
+    margin: 0;
+    margin-bottom: 70px;
+    @include f-yeseva-regular;
+    font-size: 2.25em;
+    line-height: 1;
+    color: $buddha-gold;
+    text-align: center;
+
+    &:after {
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      margin-left: -123px;
+      content: "";
+      @extend .sprite;
+      @extend .sprite-decor-gold;
+    }
+  }
+
+  &__item {
+    padding: 10px;
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--special {
+      position: relative;
+      border: 1px solid #cc9900; // color for ie
+      border-image: url("../img/menu-special-bg.png") 10 1 repeat;
+
+      &:before {
+        position: absolute;
+        top: -22px;
+        right: -1px;
+        width: 69px;
+        height: 21px;
+        @include f-lato-regular;
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: center;
+        color: #f8fafa;
+        content: "Special";
+        background: url("../img/menu-special-bg.png");
+      }
+    }
+  }
+
+  &__item-header {
+    position: relative;
+    @include clearfix;
+    margin-bottom: 26px;
+    // padding-bottom: 10px;
+    @include f-yeseva-regular;
+    font-size: 1.31em;
+    line-height: 1;
+    color: $hokey-pokey;
+    // border-bottom: 1px solid rgba(200, 159, 145, 0.5);
+
+    &:after {
+      position: absolute;
+      top: 33px;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      content: "";
+      background: url("../img/menu-dish-line.png");
+    }
+  }
+
+  &__name {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &__price {
+    float: right;
+  }
+
+  &__descr {
+    margin: 0;
+    @include f-lato-regular;
+    font-size: 1em;
+    line-height: 24px;
+    color: $tundora;
+  }
+}

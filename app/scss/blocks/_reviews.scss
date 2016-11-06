@@ -1,0 +1,63 @@
+.reviews {
+  padding: 100px 0;
+  background: #8d7368 url("../img/reviews-bg.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__wrap {
+    margin: 0 auto;
+    padding: 0 75px;
+    padding-top: 82px;
+    padding-bottom: 102px;
+    width: 770px;
+    text-align: center;
+    background: url("../img/reviews-wrap-bg.png");
+    background-size: cover;
+  }
+
+  &__heading {
+    position: relative;
+    margin: 0;
+    margin-bottom: 68px;
+    @include f-yeseva-regular;
+    font-size: 2.25em;
+    line-height: 1;
+    color: $white;
+
+    &:after {
+      position: absolute;
+      top: 55px;
+      left: 50%;
+      margin-left: -123px;
+      @extend .sprite;
+      @extend .sprite-decor-silver;
+      content: "";
+    }
+  }
+
+  &__quote {
+    position: relative;
+    margin: 0;
+    margin-bottom: 43px;
+    @include f-gentium-bold;
+    font-size: 1.56em;
+    line-height: 44px;
+    color: $iron;
+
+    &:before {
+      position: absolute;
+      top: -16px;
+      left: -45px;
+      content: "";
+      @extend .sprite;
+      @extend .sprite-reviews-quotes;
+    }
+  }
+
+  &__author {
+    @include f-lato-regular;
+    font-size: 1.12em;
+    color: $white;
+    font-style: normal;
+  }
+}

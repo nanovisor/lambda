@@ -1,0 +1,125 @@
+.reservation {
+  padding: 100px 0;
+  background: linear-gradient(to right bottom, rgba(1, 1, 1, 0.1), rgba(0, 0, 0, 0.1)),
+              url("../img/pattern-scales.jpg") center;
+  box-shadow: inset 0 0 50px rgba(1, 1, 1, 0.2);
+
+  &__left-col {
+    float: left;
+    width: 570px;
+    margin-right: 82px;
+    line-height: 0;
+    font-size: 0;
+
+    & > img {
+
+      &:first-child {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  &__right-col {
+    float: left;
+    width: 430px;
+  }
+
+  &__heading {
+    position: relative;
+    margin: 0;
+    margin-bottom: 54px;
+    @include f-yeseva-regular;
+    font-size: 2.25em;
+    line-height: 1;
+    color: $buddha-gold;
+    text-align: center;
+
+    &:after {
+      @extend .sprite;
+      @extend .sprite-decor-gold;
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      margin-left: -123px;
+      content: "";
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 15px;
+    @include f-lato-regular;
+    font-size: 1em;
+    line-height: 24px;
+    color: $tundora;
+    text-align: center;
+
+    &:last-of-type {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.reserv-form {
+  @include clearfix;
+  @include f-opensans;
+  font-size: 1em;
+  line-height: 1;
+
+  &__group {
+    float: left;
+    width: 200px;
+    margin-bottom: 30px;
+
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+
+    // two last .reserv-form__group
+    &:nth-last-child(-n+3) {
+      margin-bottom: 33px;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    margin-bottom: 8px;
+    @include f-opensans;
+    font-weight: 700;
+    color: $buddha-gold;
+  }
+
+  &__input,
+  &__select {
+    display: block;
+    height: 36px;
+    width: 100%;
+    padding-left: 14px;
+    @include f-opensans;
+    font-style: italic;
+    font-size: 16px;
+    color: $boulder;
+    border: 1px solid #c8c6c6;
+    outline: none;
+
+    &:focus {
+      border: 1px solid $hokey-pokey;
+    }
+  }
+
+  &__input--date {
+    padding-right: 30px;
+    background: url("../img/icon-calendar.png") no-repeat;
+    background-position: 94%;
+    background-color: #fff;
+  }
+
+  &__select {
+    color: rgba(124, 124, 124, 0.6);
+  }
+
+  &__btn-wrap {
+    clear: both;
+    text-align: center;
+  }
+}

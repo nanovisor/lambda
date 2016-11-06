@@ -1,0 +1,23 @@
+{
+  "name": "lambda",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    ""
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "html5shiv": "^3.7.3",
+    "normalize-css": "^4.2.0",
+    "bootstrap-sass": "^3.3.7"
+  }
+}
