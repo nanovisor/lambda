@@ -30,8 +30,8 @@
     position: relative;
     margin: 0;
     margin-bottom: 60px;
-    @include f-yeseva-regular; //  поищи безопасные шрифты к этим шрифтам и что бы похожи были
-    font-size: 21px; //         to em
+    @include f-yeseva-regular;
+    font-size: 1.313em;
     line-height: 1;
     color: #fefefe;
 

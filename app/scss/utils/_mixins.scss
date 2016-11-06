@@ -17,6 +17,15 @@
   list-style: none;
 }
 
-@mixin light {
-  outline: 1px solid blue;
+// подсветить элемент
+@mixin o1 {
+  outline: 1px solid navy;
+}
+
+@mixin o2 {
+  outline: 1px solid fuchsia;
+}
+
+@mixin o3 {
+  outline: 1px solid mediumspringgreen;
 }

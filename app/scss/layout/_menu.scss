@@ -56,7 +56,7 @@
 
     &--special {
       position: relative;
-      border: 1px solid #cc9900; // color for ie
+      border: 1px solid #cc9900;
       border-image: url("../img/menu-special-bg.png") 10 1 repeat;
 
       &:before {
@@ -80,12 +80,10 @@
     position: relative;
     @include clearfix;
     margin-bottom: 26px;
-    // padding-bottom: 10px;
     @include f-yeseva-regular;
     font-size: 1.31em;
     line-height: 1;
     color: $hokey-pokey;
-    // border-bottom: 1px solid rgba(200, 159, 145, 0.5);
 
     &:after {
       position: absolute;
