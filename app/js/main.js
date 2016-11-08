@@ -1,14 +1,20 @@
-var items = document.querySelectorAll('.dish-type__item');
+;(function() {
 
-for (var i = 0; i < items.length; i++) {
-  items[i].onmouseenter = addHighlight;
-  items[i].onmouseleave = removeHighlight;
-}
+  var menu = document.querySelector('.menu');
 
-function addHighlight() {
-  this.style.backgroundColor = 'rgba(200, 159, 45, 0.1)';
-}
 
-function removeHighlight() {
-  this.removeAttribute('style');
-}
+  menu.onclick = function(e) {
+    var target = e.target;
+
+    while (target !== this) {
+      if (target.classList.contains('dish-type__item')) {
+        target.classList.toggle('highlight');
+        return;
+      }
+
+      target = target.parentNode;
+    }
+
+  };
+
+})();

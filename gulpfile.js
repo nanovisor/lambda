@@ -22,13 +22,13 @@ gulp.task('browserSync', function() {
   });
 });
 
-// *** ПЕРЕДЕЛАТЬ *** //
 // gulp browserSync-tunnel - tunnel the Browsersync server through a random Public URL
 gulp.task('browserSync-tunnel', function() {
   browserSync.init({
     server: {
       baseDir: 'app'
     },
+    open: false, // откл. автооткрытие
     tunnel: true
   });
 });
@@ -63,9 +63,9 @@ gulp.task('images', function() {
       progressive: true,
       svgoPlugins: [{
         removeViewBox: false
-      }]
-      // BUG pngquant
-      // use: [pngquant()]
+      }],
+      // BUG pngquant ??
+      use: [pngquant()]
     })))
     .pipe(gulp.dest('dist/img'));
 });
@@ -76,9 +76,8 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest('dist/fonts'));
 });
 
-// gulp clean:dist - удаляет папку dist
-// BUG надо закрывать Atom
-gulp.task('clean:dist', function() {
+// gulp dist:remove - удаляет папку dist
+gulp.task('dist:remove', function() {
   return del.sync('dist');
 });
 
@@ -87,7 +86,7 @@ gulp.task('cache:clear', function(callback) {
   return cache.clearAll(callback);
 });
 
-// Наблюдение за изменениями HTML, SCSS, JS
+// gulp watch - наблюдение за изменениями HTML, SCSS, JS
 gulp.task('watch', ['browserSync', 'sass'], function() {
   gulp.watch('app/scss/**/*.scss', ['sass']);
   gulp.watch('app/*.html', browserSync.reload);
@@ -96,7 +95,7 @@ gulp.task('watch', ['browserSync', 'sass'], function() {
 
 // gulp build - создает готовый дистрибутив
 gulp.task('build', function(callback) {
-  runSequence('clean:dist',
+  runSequence('dist:remove',
     ['sass', 'images', 'fonts'], // в массиве таски запускаются беспорядочно
     'useref',
     callback);
